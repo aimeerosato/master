@@ -12,7 +12,6 @@ function DeleteJobComponent() {
           label="Delete Job"
           primary
           type="submit"
-          onSubmit={props.handleDelete}
         />
       </Link>  
     </div>
