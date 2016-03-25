@@ -96,14 +96,8 @@ export function addJob(job) {
   return (dispatch, getState) => {
     dispatch(dbRequest());
 
-<<<<<<< 62867824f4865cf80387875ae2aafdc4ed429dd0
     // add the user's db id to the job
     job.idUser = getState().get('app').toJS().dbUserID;
-=======
-    // TODO: get rid of this temporary job.idUser hardcoding
-    // want to set job.idUser to the rethinkdb user's id
-    job.idUser = '730ff434-14f4-4467-93fb-d8af9af47082';
->>>>>>> (feat) work on delete job
 
     return axios.post(jobUrl, job)
       .then(res => {

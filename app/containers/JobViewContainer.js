@@ -27,9 +27,6 @@ class JobViewContainer extends Component {
         />
       <br /><br />
         <PageHeader>Job View</PageHeader>
-        <DeleteJobComponent 
-          this.handleDelete={((event) => handleDelete(event, dispatch))}
-        />
         <JobData job={this.props.job} />
       </div>
     );
@@ -52,5 +49,9 @@ JobViewContainer.propTypes = {
   jobID: PropTypes.string.isRequired,
   job: PropTypes.object.isRequired,
 };
+
+// <DeleteJobComponent 
+//   this.handleDelete={((event) => handleDelete(event, dispatch))}
+// />
 
 export default connect(mapStateToProps)(JobViewContainer);
