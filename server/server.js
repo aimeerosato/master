@@ -51,7 +51,8 @@ router.get('/api/jobs/:source/:keywords', job.list);
 router.delete('/api/users/', user.deleteUser);
 router.post('/api/jobs/', job.addJob);
 router.get('/api/getjobs/:idUser', job.getJobs);
-router.delete('/api/jobs/', job.deleteJob);
+//changed to have param of 
+router.delete('/api/jobs/:id', job.deleteJob);
 router.put('/api/jobs/', job.updateJob);
 router.get('/api/me', userLookup.lookup);
 

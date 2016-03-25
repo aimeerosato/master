@@ -8,6 +8,7 @@ import Tab from 'material-ui/lib/tabs/tab';
 import Slider from 'material-ui/lib/slider';
 
 
+
 const styles = {
   marginLeft: 20,
   paddingTop: 20,

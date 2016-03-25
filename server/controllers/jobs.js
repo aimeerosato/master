@@ -79,6 +79,9 @@ module.exports.deleteJob = function*() {
     if ((jobToDelete === null) || (jobToDelete.id === null)) {
       throw new Error('The job must have a field "id".');
     }
+    //How deal with join?  
+    // let user = yield Job.get(idUser).run();
+    //yield User.get(user.id).getJoin({jobs: true}).run...delete? 
     yield Job.get(jobToDelete.id).delete().run();
     console.log('Job deleted sucessfully.');
   } catch (e) {

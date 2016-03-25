@@ -65,6 +65,9 @@ function jobs(state = List(), action) {
       return List(action.jobs.map((job) => Map(job)));
     case types.ADD_JOB_SUCCESS:
       return state.update(jobs => jobs.push(Map(action.job)));
+    //TODO: delete jobs case
+    // case types.DELETE_JOB:
+    //   return state.update(jobs => ???)
     default:
       return state;
   }

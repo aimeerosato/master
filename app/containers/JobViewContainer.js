@@ -4,12 +4,20 @@ import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/lib/raised-button';
 import PageHeader from 'react-bootstrap/lib/PageHeader';
 import JobData from '../components/jobview/JobData';
+import DeleteJobComponent from '../components/jobview/DeleteJob';
 
 class JobViewContainer extends Component {
   constructor() {
     super();
     this.state = {};
   }
+
+  handleDelete(e, dispatch) {
+    this.props.job.
+
+    dispatch(deleteJob(jobID));
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +27,9 @@ class JobViewContainer extends Component {
         />
       <br /><br />
         <PageHeader>Job View</PageHeader>
+        <DeleteJobComponent 
+          this.handleDelete={((event) => handleDelete(event, dispatch))}
+        />
         <JobData job={this.props.job} />
       </div>
     );
